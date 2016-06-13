@@ -25,22 +25,6 @@
     <div class="container">
         <div class="row">
 
-            <!-- Tags and categories -->
-           <% if (item.categories && item.categories.length || item.tags && item.tags.length) { %>
-                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
-                    <% if (item.tags && item.tags.length){ %>
-                        <%- partial('article-tags', {item: item}) %>
-                    <% } else { %>
-                        <%- partial('article-categories', {item: item}) %>
-                    <% } %>
-                </div>
-                <div class="col-lg-4 col-md-5 post-categories">
-                    <% if (item.tags && item.tags.length && item.categories && item.categories.length){ %>
-                        <%- partial('article-categories', {item: item}) %>
-                    <% } %>
-                </div>
-            <% } %>
-
             <!-- Gallery -->
             <% if (item.photos && item.photos.length){ %>
                 <%- partial('gallery') %>
@@ -58,13 +42,7 @@
                     <div class="addthis_sharing_toolbox"></div>
                 <% } %>
             </div>
-
-            <!-- Comments -->
-            <% if (item.comment != false) { %>
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <%- partial("_partial/comments.ejs") %>
-                </div>
-            <% } %>
+          
         </div>
     </div>
 </article>
