@@ -8,6 +8,11 @@
                 <%- item.subtitle %>
             </h3>
         <% } %>
+		<% if (item.description && item.description.length) { %>
+            <p class="post-description">
+                <%- item.description %>
+            </p>
+        <% } %>
     </a>
     <p class="post-meta">
         <!-- Date and Author -->
